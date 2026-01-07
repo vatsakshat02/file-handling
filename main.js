@@ -20,4 +20,14 @@ fs.writeFileSync("./sample.txt","hello world"); //this is for synchronus file
 //     }
 // })
 
-fs.appendFileSync('./sample.txt', 'hey there\n');
+fs.appendFileSync('./sample.txt', ` ${Date.now()} hey there\n`);
+//to copy a file
+fs.cpSync('./sample.txt','./copy.txt');
+
+//to delete
+// fs.unlinkSync('./copy.txt');
+
+//to check the status of a file
+console.log(fs.statSync('./sample.txt'));
+
+//we can create directories using mkdir
